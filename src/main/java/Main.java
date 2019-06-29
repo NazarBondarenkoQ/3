@@ -2,6 +2,7 @@ package main.java;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,8 +10,8 @@ public class Main {
         Integer[] arr = new Integer[]{2, 3, 1, 7, 11};
         Integer[] array = new Integer[]{-13, 11, -10, -11};
         Integer[] array1 = new Integer[]{1,2,3,4,5,6,7,8,9};
-        ArrayList<String> example = new ArrayList(Arrays.asList("One","Two", "Tree", "Four"));
-        ArrayList<Integer> example1 = new ArrayList(Arrays.asList(3,9,11,18,20,22));
+        List<String> example = new ArrayList<>(Arrays.asList("One","Two", "Tree", "Four"));
+        List<Integer> example1 = new ArrayList<>(Arrays.asList(3,9,11,18,20,22));
         ArrayTask arrayTask = new ArrayTask();
         ArrayListTask arrayListTask = new ArrayListTask();
 

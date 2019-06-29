@@ -11,7 +11,7 @@ public class ArrayTask {
      * This method sorts the given array via library methods of Arrays and Collections. And prints the array instantly.
      */
 
-    public void autoSort(Integer[] arr) {
+    void autoSort(Integer[] arr) {
 
         Arrays.sort(arr, Collections.reverseOrder());
         for (Integer i : arr) {
@@ -36,8 +36,8 @@ public class ArrayTask {
                 }
             }
         }
-        for (int i = 0; i < arr.length; i++) { // Array printing
-            System.out.print(arr[i] + " ");
+        for (Integer integer : arr) { // Array printing
+            System.out.print(integer + " ");
         }
         System.out.println();
     }
@@ -46,7 +46,7 @@ public class ArrayTask {
      * This method calculates the sum of positive number and return the sum as an Integer value;
      */
 
-    public Integer onlyPositiveNumber(Integer[] array) {
+    Integer onlyPositiveNumber(Integer[] array) {
         int sum = 0;
         for (Integer i : array) {
             if (i > 0) {
@@ -60,12 +60,12 @@ public class ArrayTask {
      * This method calculates the arithmetical mean of all array elements and returns the Double value;
      */
 
-    public Double averageValue(Integer[] array){
+    double averageValue(Integer[] array){
         Integer sum = 0;
-        Double value = Double.valueOf(0);
+        double value = (double) 0;
         for (Integer i : array) {
             sum += i;
-            value = sum / Double.valueOf(array.length);
+            value = sum / (double) array.length;
         }
         return value;
     }

@@ -1,15 +1,14 @@
 package main.java;
 
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.List;
 
-public class ArrayListTask {
+class ArrayListTask {
 
     /**
      * This method checks all of the array elements and replaces the relevant element if it's value is "Tree" .
      */
 
-    public void replaceElement(ArrayList<String> stringArrayList) {
+    void replaceElement(List<String> stringArrayList) {
         for (String i : stringArrayList) {
             if (i.contentEquals("Tree")) {
                 stringArrayList.set(stringArrayList.indexOf(i), "Three");
@@ -22,14 +21,8 @@ public class ArrayListTask {
      * This method uses Iterator to delete all the elements of the array that can be divided by 3 without the excess.
      */
 
-    public void deleteElement(ArrayList<Integer> integerArrayList) {
-        Iterator<Integer> iterator = integerArrayList.iterator();
-        while (iterator.hasNext()) {
-            Integer number = iterator.next();
-            if (number % 3 == 0) {
-                iterator.remove();
-            }
-        }
+    void deleteElement(List<Integer> integerArrayList) {
+        integerArrayList.removeIf(number -> number % 3 == 0);
         System.out.println(integerArrayList);
     }
 }
